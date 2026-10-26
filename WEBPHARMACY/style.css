@@ -1,0 +1,31 @@
+/* 2.2 Base Style - Reset + defaults - 5.5 Cross-browser */
+* { margin:0; padding:0; box-sizing:border-box; }
+html { font-size:16px; scroll-behavior:smooth; }
+body {
+  font-family:'Segoe UI', Aptos Display, Arial, sans-serif;
+  font-size:1rem; line-height:1.6; color:#2c3e50; background:#f8fbf9;
+}
+/* 2.3 Typography */
+h1,h2,h3 { font-weight:700; line-height:1.2; letter-spacing:-0.02em; color:#0e7a6c; }
+h1 { font-size:2.5rem; margin-bottom:0.5em; } /* rem */
+h2 { font-size:2rem; margin-bottom:0.6em; }
+p { font-size:1em; margin-bottom:1em; } /* em */
+.container { width:90%; max-width:1200px; margin:0 auto; padding:2em 0; } /* % */
+.btn { display:inline-block; padding:0.8em 1.8em; font-size:1.1rem; background:#0e7a6c; color:white; text-decoration:none; border-radius:0.5em; }
+header { background:#0e7a6c; padding:1rem 0; position:sticky; top:0; }
+nav { display:flex; flex-wrap:wrap; gap:1.5rem; }
+nav a { color:white; text-decoration:none; font-size:1rem; }
+.services-grid { display:grid; grid-template-columns:1fr; gap:1.5rem; margin-top:2em; } /* mobile single-column */
+.card { background:white; padding:1.5em; border-radius:0.8em; box-shadow:0 2px 8px rgba(0,0,0,0.08); width:100%; }
+
+/* 3.1 Breakpoints */
+@media (min-width:768px) { /* Tablet */
+  .services-grid { grid-template-columns:1fr 1fr; } /* 2 columns */
+  h1 { font-size:3rem; } /* 2.2 Modify font size per breakpoint */
+  .hero { display:grid; grid-template-columns:1.2fr 0.8fr; gap:2rem; align-items:center; }
+}
+@media (min-width:1024px) { /* Desktop */
+  .services-grid { grid-template-columns:1fr 1fr 1fr; } /* 3 columns multi to single */
+  h1 { font-size:3.5rem; }
+  header .container { display:flex; justify-content:space-between; align-items:center; }
+}
